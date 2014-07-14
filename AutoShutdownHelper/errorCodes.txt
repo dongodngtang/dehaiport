@@ -1,0 +1,22 @@
+错误码说明（历史记录中）
+===================================
+1=响应行缓存溢出（超出1K）
+2=通信失败（recv）
+3=通信失败（send）
+4=建立连接失败（gethostbyname）
+5=建立连接失败（connect）
+6=服务器响应出错（WELCOME）
+7=服务器响应出错（EHLO）
+8=身份验证未通过（PLAIN）
+9=身份验证出错（PLAIN）
+10=服务器响应出错（CRAM-MD5）
+11=身份验证未通过（CRAM-MD5）
+12=身份验证出错（CRAM-MD5）
+13=服务器响应出错（LOGIN）
+14=服务器响应出错（LOGIN-username）
+15=身份验证未通过（LOGIN-password）
+16=身份验证出错（LOGIN-password）
+17=服务器响应出错（MAIL FROM）
+18=服务器响应出错（RCPT TO）
+19=服务器响应出错（DATA）
+20=服务器响应出错（DATA-finish）

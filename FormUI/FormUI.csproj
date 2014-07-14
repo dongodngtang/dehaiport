@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43018355-E754-4B30-8E69-D749984C702B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormUI</RootNamespace>
+    <AssemblyName>FormUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'new|x86'">
+    <OutputPath>bin\x86\new\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.89.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=2.0.38.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.89.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes\AopAttribute.cs" />
+    <Compile Include="Attributes\LogAttribute.cs" />
+    <Compile Include="Attributes\LogProperty.cs" />
+    <Compile Include="Attributes\LogSink.cs" />
+    <Compile Include="Attributes\OperationAttribute.cs" />
+    <Compile Include="ManagerForms\Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\Alarm.Designer.cs">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\OpenCTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\OpenCTerminal.Designer.cs">
+      <DependentUpon>OpenCTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLayer\DataGridViewPrinter.cs" />
+    <Compile Include="OperationLayer\DosCommand.cs" />
+    <Compile Include="OperationLayer\EventListenter.cs" />
+    <Compile Include="OperationLayer\MessageBoxTimeOut.cs" />
+    <Compile Include="OperationLayer\WakeUp.cs" />
+    <Compile Include="SettingForms\AutoPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\AutoPlayer.Designer.cs">
+      <DependentUpon>AutoPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\AutoStartUpOrEsc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\AutoStartUpOrEsc.Designer.cs">
+      <DependentUpon>AutoStartUpOrEsc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\BattryParatemerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\BattryParatemerSetting.Designer.cs">
+      <DependentUpon>BattryParatemerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\CallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\CallForm.Designer.cs">
+      <DependentUpon>CallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\CallInFilter.cs" />
+    <Compile Include="Filters\ConditionFilter.cs" />
+    <Compile Include="Filters\ConnectFilter.cs" />
+    <Compile Include="Filters\ErrorFilter.cs" />
+    <Compile Include="Filters\Filter.cs" />
+    <Compile Include="Filters\FilterProcessor.cs" />
+    <Compile Include="Filters\HangUpFilter.cs" />
+    <Compile Include="Filters\MessageFilter.cs" />
+    <Compile Include="Filters\MessageReplyFilter.cs" />
+    <Compile Include="ManagerForms\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\MusicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\MusicForm.Designer.cs">
+      <DependentUpon>MusicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\MusicTimeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\MusicTimeSetting.Designer.cs">
+      <DependentUpon>MusicTimeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\OnDemandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\OnDemandForm.Designer.cs">
+      <DependentUpon>OnDemandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationLayer\AlarmClock.cs" />
+    <Compile Include="OperationLayer\ControlHelpers.cs" />
+    <Compile Include="OperationLayer\FileOperation.cs" />
+    <Compile Include="OperationLayer\OrderDefinition.cs" />
+    <Compile Include="OperationLayer\Port.cs" />
+    <Compile Include="OperationLayer\AT.cs" />
+    <Compile Include="OperationLayer\Printer.cs" />
+    <Compile Include="SettingForms\PhotovoltaicAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\PhotovoltaicAlarm.Designer.cs">
+      <DependentUpon>PhotovoltaicAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\PopupLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\PopupLayer.Designer.cs">
+      <DependentUpon>PopupLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\SpeakForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\SpeakForm.Designer.cs">
+      <DependentUpon>SpeakForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\TerminalAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\TerminalAdd.Designer.cs">
+      <DependentUpon>TerminalAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\TerminalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\TerminalForm.Designer.cs">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\VoiceText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\VoiceText.Designer.cs">
+      <DependentUpon>VoiceText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\WakeUpandShutDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\WakeUpandShutDown.Designer.cs">
+      <DependentUpon>WakeUpandShutDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerminalMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminalMonitor.Designer.cs">
+      <DependentUpon>TerminalMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\UserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\UserFrm.designer.cs">
+      <DependentUpon>UserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\WhiteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\WhiteForm.Designer.cs">
+      <DependentUpon>WhiteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\WhiteListAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\WhiteListAddForm.Designer.cs">
+      <DependentUpon>WhiteListAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\PortForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\PortForm.designer.cs">
+      <DependentUpon>PortForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OperationLayer\SerialPortUtil.cs" />
+    <Compile Include="ManagerForms\WhiteListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\WhiteListForm.Designer.cs">
+      <DependentUpon>WhiteListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForms\VolumeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForms\VolumeSetting.Designer.cs">
+      <DependentUpon>VolumeSetting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\Alarm.resx">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\OpenCTerminal.resx">
+      <DependentUpon>OpenCTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\AutoPlayer.resx">
+      <DependentUpon>AutoPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\AutoStartUpOrEsc.resx">
+      <DependentUpon>AutoStartUpOrEsc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\BattryParatemerSetting.resx">
+      <DependentUpon>BattryParatemerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\CallForm.resx">
+      <DependentUpon>CallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\MusicForm.resx">
+      <DependentUpon>MusicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\MusicTimeSetting.resx">
+      <DependentUpon>MusicTimeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\OnDemandForm.resx">
+      <DependentUpon>OnDemandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\PhotovoltaicAlarm.resx">
+      <DependentUpon>PhotovoltaicAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\PopupLayer.resx">
+      <DependentUpon>PopupLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\SpeakForm.resx">
+      <DependentUpon>SpeakForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\TerminalAdd.resx">
+      <DependentUpon>TerminalAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\TerminalForm.resx">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\VoiceText.resx">
+      <DependentUpon>VoiceText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\WakeUpandShutDown.resx">
+      <DependentUpon>WakeUpandShutDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminalMonitor.resx">
+      <DependentUpon>TerminalMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\UserFrm.resx">
+      <DependentUpon>UserFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\WhiteForm.resx">
+      <DependentUpon>WhiteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\WhiteListAddForm.resx">
+      <DependentUpon>WhiteListAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\PortForm.resx">
+      <DependentUpon>PortForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\WhiteListForm.resx">
+      <DependentUpon>WhiteListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForms\VolumeSetting.resx">
+      <DependentUpon>VolumeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="SerialPort.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Black.jpg" />
+    <Content Include="Resources\Red.jpg" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4836DE9B-83E5-4AFB-929A-F50B84A9A89F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{D09799B5-8286-406E-9E12-D555520CB67C}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
